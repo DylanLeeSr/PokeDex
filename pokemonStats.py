@@ -14,14 +14,17 @@ print("Weight:", monster.weight)
 ability_names = []
 for ability_metadata in monster.abilities:
        ability_names.append(ability_metadata.ability)
-
 print(f"{'Abilities:'} {', ' .join(map(str, ability_names))}")
 
+held_items = monster.held_items
+if held_items:
+    print("Held Items:", held_items)
+else:
+    print("Held Items: None")
 
-'''print("Forms:", monster.forms)
-print("Game Indices:", monster.game_indices)
-print("Held Items:", monster.held_items)
-print("Location Area Encounters:", monster.location_area_encounters)
+
+
+'''print("Location Area Encounters:", monster.location_area_encounters)
 print("Moves:", monster.moves)
 print("Past Types:", monster.past_types)
 print("Sprites:", monster.sprites)
